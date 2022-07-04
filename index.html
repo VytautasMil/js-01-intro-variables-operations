@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS 01 intro</title>
+    <!-- <script defer></script> -->
+  </head>
+
+  <body>
+    <button id="btn1">Delete h1</button>
+
+    <script>
+      let h1El = document.createElement("h1");
+      h1El.textContent = "JS 01 intro";
+      document.body.append(h1El);
+      h1El.textContent += " - hello world!";
+      h1El.style.fontSize = "100px";
+
+      let btn1El = document.getElementById("btn1");
+      btn1El.onclick = function () {
+        h1El.remove();
+      };
+    </script>
+  </body>
+</html>
